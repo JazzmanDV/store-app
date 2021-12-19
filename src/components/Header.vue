@@ -1,7 +1,7 @@
 <template>
     <ul>
         <li><router-link to="/">О нас</router-link></li>
-        <li><router-link to="/goods">Каталог</router-link></li>
+        <li><router-link to="/goods">Товары</router-link></li>
         <li>
             <router-link to="/cart"
                 >Корзина

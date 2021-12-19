@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import AboutUs from "../components/AboutUs.vue";
-import Goods from "../components/Goods.vue";
-import Cart from "../components/Cart.vue";
+import AboutUs from "../views/AboutUs.vue";
+import Goods from "../views/Goods.vue";
+import Cart from "../views/Cart.vue";
 
 Vue.use(VueRouter);
 
