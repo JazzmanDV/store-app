@@ -3,7 +3,23 @@
         <li><a href="#">О нас</a></li>
         <li><a href="#">Каталог</a></li>
         <li>
-            <a href="#">Корзина <img src="../assets/cart-basket.svg" /></a>
+            <a href="#"
+                >Корзина
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="rubicons cart-basket"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    fill="none"
+                >
+                    <path d="M19 21H5L3 9h18l-2 12z" stroke-linecap="round"></path>
+                    <path d="M6 9l3-6M18 9l-3-6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M8 13v4M12 13v4M16 13v4" stroke-linecap="round"></path>
+                </svg>
+            </a>
         </li>
     </ul>
 </template>
