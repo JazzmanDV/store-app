@@ -1,9 +1,9 @@
 <template>
     <ul>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Каталог</a></li>
+        <li><router-link to="/">О нас</router-link></li>
+        <li><router-link to="/goods">Каталог</router-link></li>
         <li>
-            <a href="#"
+            <router-link to="/cart"
                 >Корзина
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@
                     <path d="M6 9l3-6M18 9l-3-6" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M8 13v4M12 13v4M16 13v4" stroke-linecap="round"></path>
                 </svg>
-            </a>
+            </router-link>
         </li>
     </ul>
 </template>
@@ -27,9 +27,6 @@
 <script>
 export default {
     name: "Header",
-    props: {
-        msg: String,
-    },
 };
 </script>
 
@@ -52,5 +49,13 @@ a {
     gap: 0.5rem;
 
     text-decoration: none;
+}
+a:hover,
+.link--active svg {
+    color: var(--color-primary--hovered);
+}
+.link--active {
+    color: var(--color-primary--hovered);
+    text-decoration: underline;
 }
 </style>

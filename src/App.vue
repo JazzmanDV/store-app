@@ -1,6 +1,7 @@
 <template>
     <div>
         <Header />
+        <router-view></router-view>
     </div>
 </template>
 
@@ -31,11 +32,5 @@ a,
 svg {
     color: var(--color-primary);
     transition: 0.25s color;
-}
-a:hover {
-    color: var(--color-primary--hovered);
-}
-a:hover svg {
-    color: var(--color-primary--hovered);
 }
 </style>
