@@ -22,16 +22,19 @@ ul {
     display: flex;
     justify-content: center;
     gap: 2rem;
+
+    padding: 0.5rem;
+    margin: 0;
+
+    border-bottom: 1px solid var(--color-primary);
+
     list-style-type: none;
-    padding: 0;
-}
-li {
-    display: inline-block;
 }
 a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
     text-decoration: none;
 }
 </style>

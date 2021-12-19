@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div>
         <Header />
     </div>
 </template>
@@ -16,16 +16,21 @@ export default {
 </script>
 
 <style>
-#app {
+:root {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 22px;
+
+    background-color: #f6f6f6;
+
+    --color-primary: black;
+    --color-primary--hovered: #e6ab3f;
 }
 a {
-    color: black;
+    color: var(--color-primary);
 }
 a:hover {
-    color: blue;
+    color: var(--color-primary--hovered);
 }
 </style>
