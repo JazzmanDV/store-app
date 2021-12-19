@@ -33,4 +33,7 @@ svg {
     color: var(--color-primary);
     transition: 0.25s color;
 }
+h2 {
+    text-align: center;
+}
 </style>

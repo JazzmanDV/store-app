@@ -1,5 +1,5 @@
 <template>
-    <h1>О нас</h1>
+    <h2>О нас</h2>
 </template>
 
 <script>
