@@ -51,6 +51,7 @@ a {
     text-decoration: none;
 }
 a:hover,
+a:hover svg,
 .link--active svg {
     color: var(--color-primary--hovered);
 }
