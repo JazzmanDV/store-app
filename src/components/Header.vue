@@ -7,7 +7,6 @@
                 >Корзина
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="rubicons cart-basket"
                     width="28"
                     height="28"
                     viewBox="0 0 24 24"
@@ -32,12 +31,19 @@ export default {
 
 <style scoped>
 ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9999;
+
+    margin: 0 1rem;
+    padding: 0.5rem;
+
     display: flex;
     justify-content: center;
     gap: 2rem;
-
-    padding: 0.5rem;
-    margin: 0;
 
     border-bottom: 1px solid var(--color-primary);
 
