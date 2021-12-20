@@ -3,8 +3,8 @@
         <li><router-link to="/">О нас</router-link></li>
         <li><router-link to="/goods">Товары</router-link></li>
         <li>
-            <router-link to="/cart"
-                >Корзина
+            <router-link to="/cart">
+                Корзина ({{ totalAmountInCart }})
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -26,6 +26,9 @@
 <script>
 export default {
     name: "Header",
+    props: {
+        totalAmountInCart: Number,
+    },
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <Header />
+        <Header :totalAmountInCart="goods.totalAmountInCart()" />
         <router-view :goods="goods"></router-view>
     </div>
 </template>
@@ -15,26 +15,34 @@ export default {
     },
     data: function () {
         return {
-            goods: [
-                {
-                    id: 0,
-                    title: "Ножницы",
-                    description: "Обыкновенные ножницы",
-                    price: 250,
+            goods: {
+                items: [
+                    {
+                        id: 0,
+                        title: "Ножницы",
+                        description: "Обыкновенные ножницы",
+                        price: 250,
+                        amountInCart: 0,
+                    },
+                    {
+                        id: 1,
+                        title: "Расческа",
+                        description: "Обыкновенная расческа",
+                        price: 350,
+                        amountInCart: 0,
+                    },
+                    {
+                        id: 2,
+                        title: "Мыло",
+                        description: "Обыкновенное мыло",
+                        price: 100,
+                        amountInCart: 0,
+                    },
+                ],
+                totalAmountInCart() {
+                    return this.items.reduce((prev, curr) => prev + curr.amountInCart, 0);
                 },
-                {
-                    id: 1,
-                    title: "Расческа",
-                    description: "Обыкновенная расческа",
-                    price: 350,
-                },
-                {
-                    id: 2,
-                    title: "Мыло",
-                    description: "Обыкновенное мыло",
-                    price: 100,
-                },
-            ],
+            },
         };
     },
 };

@@ -2,8 +2,8 @@
     <div>
         <h2>Товары</h2>
         <ul>
-            <li v-for="good in goods" v-bind:key="good.id">
-                <Good v-bind="good" />
+            <li v-for="good in goods.items" v-bind:key="good.id">
+                <Good :good="good" hasAddButton />
             </li>
         </ul>
     </div>
@@ -18,7 +18,7 @@ export default {
         Good,
     },
     props: {
-        goods: Array,
+        goods: Object,
     },
 };
 </script>
