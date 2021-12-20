@@ -55,14 +55,17 @@ a {
     gap: 0.5rem;
 
     text-decoration: none;
+
+    border-bottom: 2px solid transparent;
+    transition: 0.25s color, 0.25s border-bottom-color;
 }
 a:hover,
 a:hover svg,
+.link--active,
 .link--active svg {
     color: var(--color-primary--hovered);
 }
 .link--active {
-    color: var(--color-primary--hovered);
-    text-decoration: underline;
+    border-bottom: 2px solid var(--color-primary--hovered);
 }
 </style>
