@@ -3,31 +3,32 @@
         <h3>{{ good.title }}</h3>
         <p>{{ good.description }}</p>
         <span>{{ good.price }} у.е.</span>
-        <button v-if="hasAddButton" @click="addToCart">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4">
-                <line
-                    x1="2"
-                    y1="0"
-                    x2="2"
-                    y2="4"
-                    stroke="black"
-                    stroke-width="1px"
-                    vector-effect="non-scaling-stroke"
-                ></line>
-                <line
-                    x1="0"
-                    y1="2"
-                    x2="4"
-                    y2="2"
-                    stroke="black"
-                    stroke-width="1px"
-                    vector-effect="non-scaling-stroke"
-                ></line>
-            </svg>
-        </button>
-        <div v-else class="align-right">
-            <span>{{ good.amountInCart }} шт.</span>
-            <button @click="removeFromCart">
+        <div class="flex">
+            <span v-if="!hasAddButton">{{ good.amountInCart }} шт.</span>
+            <input type="number" name="" v-model.number="inputAmount" />
+            <button v-if="hasAddButton" @click="addToCart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4">
+                    <line
+                        x1="2"
+                        y1="0"
+                        x2="2"
+                        y2="4"
+                        stroke="black"
+                        stroke-width="1px"
+                        vector-effect="non-scaling-stroke"
+                    ></line>
+                    <line
+                        x1="0"
+                        y1="2"
+                        x2="4"
+                        y2="2"
+                        stroke="black"
+                        stroke-width="1px"
+                        vector-effect="non-scaling-stroke"
+                    ></line>
+                </svg>
+            </button>
+            <button v-else @click="removeFromCart">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4">
                     <line
                         x1="0"
@@ -60,12 +61,23 @@ export default {
         good: Object,
         hasAddButton: Boolean,
     },
+    data: function () {
+        return {
+            inputAmount: 1,
+        };
+    },
     methods: {
         addToCart() {
-            this.good.amountInCart++;
+            if (!Number.isNaN(this.inputAmount) && this.inputAmount > 0) {
+                this.good.amountInCart += this.inputAmount;
+            }
+            this.inputAmount = 1;
         },
         removeFromCart() {
-            this.good.amountInCart--;
+            if (!Number.isNaN(this.inputAmount) && this.inputAmount > 0 && this.good.amountInCart >= this.inputAmount) {
+                this.good.amountInCart -= this.inputAmount;
+            }
+            this.inputAmount = 1;
         },
     },
 };
@@ -75,7 +87,7 @@ export default {
 .good {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
 
     padding: 1rem;
     background-color: #fff;
@@ -83,13 +95,25 @@ export default {
 }
 h3 {
     margin: 0;
-    text-align: center;
 }
 p {
     margin: 0;
 }
+.flex {
+    display: flex;
+    gap: 0.5rem;
+}
 span {
     align-self: flex-end;
+}
+input {
+    border: 1px solid var(--color-primary);
+
+    flex-grow: 0;
+    flex-shrink: 1;
+    font: inherit;
+    width: 2rem;
+    margin-left: auto;
 }
 button {
     cursor: pointer;
@@ -114,11 +138,5 @@ button:hover {
 }
 button:hover line {
     stroke: var(--color-primary--hovered);
-}
-.align-right {
-    display: flex;
-    gap: 1rem;
-
-    align-self: flex-end;
 }
 </style>
