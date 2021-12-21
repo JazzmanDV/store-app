@@ -1,5 +1,11 @@
 <template>
-    <h2>О нас</h2>
+    <div>
+        <h2>О нас</h2>
+        <p>
+            Данный сайт не является магазином или интернет-магазином, а создан исключительно в целях практики
+            использования фреймворка Vue.js. Сам сайт и его содержимое не является публичной офертой.
+        </p>
+    </div>
 </template>
 
 <script>
@@ -8,4 +14,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+p {
+    max-width: 32rem;
+    margin: 0 auto;
+    text-align: center;
+}
+</style>
