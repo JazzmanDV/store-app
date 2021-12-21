@@ -1,6 +1,16 @@
 <template>
     <div class="good">
         <h3>{{ good.title }}</h3>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="imageName in good.images" v-bind:key="imageName">
+                    <img :src="require(`../assets/${imageName}`)" />
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
         <p>{{ good.description }}</p>
         <span>{{ good.price }} у.е.</span>
         <div class="flex">
@@ -66,6 +76,17 @@ export default {
             inputAmount: 1,
         };
     },
+    mounted() {
+        new window.Swiper(".swiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    },
     methods: {
         addToCart() {
             if (!Number.isNaN(this.inputAmount) && this.inputAmount > 0) {
@@ -98,6 +119,16 @@ h3 {
 }
 p {
     margin: 0;
+}
+.swiper {
+    width: 10rem;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: 1px solid var(--color-primary);
+}
+img {
+    width: 100%;
 }
 .flex {
     display: flex;
