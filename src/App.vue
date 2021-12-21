@@ -13,7 +13,7 @@ export default {
     components: {
         Header,
     },
-    data: function () {
+    data() {
         return {
             goods: {
                 items: [
@@ -23,20 +23,23 @@ export default {
                         description: "Обыкновенные ножницы",
                         price: 250,
                         amountInCart: 0,
+                        images: ["scissors1.png", "scissors2.png"],
                     },
                     {
                         id: 1,
                         title: "Расческа",
-                        description: "Обыкновенная расческа",
+                        description: "Обыкновенные очки",
                         price: 350,
                         amountInCart: 0,
+                        images: ["glasses1.png", "glasses2.png"],
                     },
                     {
                         id: 2,
                         title: "Мыло",
-                        description: "Обыкновенное мыло",
+                        description: "Обыкновенная ручка",
                         price: 100,
                         amountInCart: 0,
+                        images: ["pen.png"],
                     },
                 ],
                 totalAmountInCart() {

@@ -61,7 +61,7 @@ export default {
         good: Object,
         hasAddButton: Boolean,
     },
-    data: function () {
+    data() {
         return {
             inputAmount: 1,
         };
