@@ -27,7 +27,7 @@ export default {
                     },
                     {
                         id: 1,
-                        title: "Расческа",
+                        title: "Очки",
                         description: "Обыкновенные очки",
                         price: 350,
                         amountInCart: 0,
