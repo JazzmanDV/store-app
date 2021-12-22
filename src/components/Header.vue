@@ -50,7 +50,7 @@ ul {
     justify-content: center;
     gap: 2rem;
 
-    background-color: var(--background-color);
+    background-color: white;
 
     list-style-type: none;
 }
