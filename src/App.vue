@@ -35,7 +35,7 @@ export default {
                     },
                     {
                         id: 2,
-                        title: "Мыло",
+                        title: "Ручка",
                         description: "Обыкновенная ручка",
                         price: 100,
                         amountInCart: 0,
