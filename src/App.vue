@@ -64,8 +64,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size: 22px;
 
-    background-color: #f6f6f6;
+    background-color: var(--background-color);
 
+    --background-color: #f6f6f6;
     --color-primary: black;
     --color-primary--hovered: #e6ab3f;
 }

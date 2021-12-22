@@ -41,14 +41,16 @@ ul {
 
     z-index: 9999;
 
-    margin: 0 1rem;
+    box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.2);
+
+    margin: 0;
     padding: 0.5rem;
 
     display: flex;
     justify-content: center;
     gap: 2rem;
 
-    border-bottom: 1px solid var(--color-primary);
+    background-color: var(--background-color);
 
     list-style-type: none;
 }

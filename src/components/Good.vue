@@ -110,9 +110,10 @@ export default {
     flex-direction: column;
     gap: 0.5rem;
 
+    box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.2);
+
     padding: 1rem;
     background-color: #fff;
-    border: 1px solid var(--color-primary);
 }
 h3 {
     margin: 0;
