@@ -76,17 +76,6 @@ export default {
             inputAmount: 1,
         };
     },
-    mounted() {
-        new window.Swiper(".swiper", {
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-            },
-        });
-    },
     methods: {
         addToCart() {
             if (!Number.isNaN(this.inputAmount) && this.inputAmount > 0) {

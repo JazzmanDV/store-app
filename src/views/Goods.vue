@@ -12,6 +12,9 @@
 <script>
 import Good from "../components/Good.vue";
 
+import Swiper from "/src/swiper/swiper.js";
+import "/src/swiper/swiper.css";
+
 export default {
     name: "Goods",
     components: {
@@ -19,6 +22,27 @@ export default {
     },
     props: {
         goods: Object,
+    },
+    data() {
+        return {
+            swiper: null,
+        };
+    },
+    mounted() {
+        this.swiper = new Swiper(".swiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    },
+    beforeDestroy() {
+        for (let i = 0; i < this.swiper.length; i++) {
+            this.swiper[i].destroy();
+        }
     },
 };
 </script>
