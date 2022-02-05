@@ -66,6 +66,7 @@
 
 <script>
 import Swiper from "/src/swiper/swiper.js";
+import "/src/swiper/swiper.css";
 
 export default {
     name: "Good",
