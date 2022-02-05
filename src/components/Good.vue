@@ -4,7 +4,7 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" v-for="imageName in good.images" v-bind:key="imageName">
-                    <img :src="require(`../assets/${imageName}`)" />
+                    <img :src="require(`/src/assets/${imageName}`)" />
                 </div>
             </div>
             <div class="swiper-button-next"></div>
@@ -65,6 +65,8 @@
 </template>
 
 <script>
+import Swiper from "/src/swiper/swiper.js";
+
 export default {
     name: "Good",
     props: {
@@ -74,6 +76,7 @@ export default {
     data() {
         return {
             inputAmount: 1,
+            swiper: null,
         };
     },
     methods: {
@@ -89,6 +92,20 @@ export default {
             }
             this.inputAmount = 1;
         },
+    },
+    mounted() {
+        this.swiper = new Swiper(".swiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    },
+    beforeDestroy() {
+        this.swiper.destroy();
     },
 };
 </script>
