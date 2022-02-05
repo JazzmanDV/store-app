@@ -95,13 +95,13 @@ export default {
         },
     },
     mounted() {
-        this.swiper = new Swiper(".swiper", {
+        this.swiper = new Swiper(this.$el.querySelector(".swiper"), {
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: this.$el.querySelector(".swiper-button-next"),
+                prevEl: this.$el.querySelector(".swiper-button-prev"),
             },
             pagination: {
-                el: ".swiper-pagination",
+                el: this.$el.querySelector(".swiper-pagination"),
             },
         });
     },
