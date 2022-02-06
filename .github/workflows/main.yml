@@ -29,7 +29,6 @@ jobs:
             - name: Install and build
               run: |
                   npm ci
-                  export NODE_ENV="production"
                   npm run build
 
             - name: Deploy
