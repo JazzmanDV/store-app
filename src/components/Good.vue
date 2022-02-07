@@ -4,7 +4,7 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" v-for="imageName in good.images" v-bind:key="imageName">
-                    <img :src="require(`/src/assets/${imageName}`)" />
+                    <img :src="`/src/assets/${imageName}`" />
                 </div>
             </div>
             <div class="swiper-button-next"></div>

@@ -1,47 +1,20 @@
 {
     "name": "store-app",
     "version": "0.1.0",
-    "private": true,
+    "browserslist": "cover 99.5%",
     "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build --dest ./build",
-        "lint": "vue-cli-service lint"
+        "start": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
     "dependencies": {
-        "core-js": "^3.6.5",
-        "vue": "^2.6.11",
+        "vue": "^2.6.14",
         "vue-router": "^3.5.3"
     },
     "devDependencies": {
-        "@vue/cli-plugin-babel": "~4.5.0",
-        "@vue/cli-plugin-eslint": "~4.5.0",
-        "@vue/cli-service": "~4.5.0",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^6.7.2",
-        "eslint-plugin-vue": "^6.2.2",
-        "vue-template-compiler": "^2.6.11"
-    },
-    "eslintConfig": {
-        "root": true,
-        "env": {
-            "node": true
-        },
-        "extends": [
-            "plugin:vue/essential",
-            "eslint:recommended"
-        ],
-        "parserOptions": {
-            "parser": "babel-eslint",
-            "ecmaVersion": 10
-        },
-        "rules": {},
-        "ignorePatterns": [
-            "src/swiper/"
-        ]
-    },
-    "browserslist": [
-        "> 0.5%",
-        "last 2 versions",
-        "not dead"
-    ]
+        "postcss-preset-env": "^7.3.1",
+        "vite": "^2.7.2",
+        "vite-plugin-vue2": "^1.9.3",
+        "@vitejs/plugin-legacy": "^1.6.4"
+    }
 }
