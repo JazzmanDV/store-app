@@ -1,4 +1,5 @@
 /**
+ * @license
  * Swiper 7.3.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
