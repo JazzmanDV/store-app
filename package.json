@@ -12,9 +12,10 @@
         "vue-router": "^3.5.3"
     },
     "devDependencies": {
+        "@vitejs/plugin-legacy": "^1.6.4",
+        "postcss": "^8.4.6",
         "postcss-preset-env": "^7.3.1",
         "vite": "^2.7.2",
-        "vite-plugin-vue2": "^1.9.3",
-        "@vitejs/plugin-legacy": "^1.6.4"
+        "vite-plugin-vue2": "^1.9.3"
     }
 }
