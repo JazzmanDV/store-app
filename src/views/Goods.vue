@@ -27,6 +27,7 @@ export default {
 ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
 
     padding: 0;

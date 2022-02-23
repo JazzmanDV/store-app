@@ -48,6 +48,7 @@ ul {
 
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
 
     background-color: white;

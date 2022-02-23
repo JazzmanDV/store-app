@@ -78,4 +78,10 @@ svg {
 h2 {
     text-align: center;
 }
+
+@media (max-width: 417px) {
+    .app {
+        margin-top: 8rem;
+    }
+}
 </style>
