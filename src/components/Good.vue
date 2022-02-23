@@ -4,7 +4,7 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" v-for="imageName in good.images" v-bind:key="imageName">
-                    <img :src="`/src/assets/${imageName}`" />
+                    <img :src="getImageUrl(imageName)" />
                 </div>
             </div>
             <div class="swiper-button-next"></div>
@@ -92,6 +92,9 @@ export default {
                 this.good.amountInCart -= this.inputAmount;
             }
             this.inputAmount = 1;
+        },
+        getImageUrl(imageName) {
+            return new URL(`/src/assets/${imageName}`, import.meta.url).href;
         },
     },
     mounted() {
