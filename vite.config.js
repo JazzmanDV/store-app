@@ -8,7 +8,6 @@ export default defineConfig({
     plugins: [
         createVuePlugin(),
         legacy({
-            targets: ["cover 99.5%"],
             additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
         }),
     ],
