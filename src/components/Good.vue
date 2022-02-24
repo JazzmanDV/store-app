@@ -7,8 +7,6 @@
                     <img :src="getImageUrl(imageName)" />
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
         </div>
         <p>{{ good.description }}</p>
@@ -99,11 +97,8 @@ export default {
     },
     mounted() {
         this.swiper = new Swiper(this.$el.querySelector(".swiper"), {
-            navigation: {
-                nextEl: this.$el.querySelector(".swiper-button-next"),
-                prevEl: this.$el.querySelector(".swiper-button-prev"),
-            },
             pagination: {
+                clickable: true,
                 el: this.$el.querySelector(".swiper-pagination"),
             },
         });
@@ -133,10 +128,6 @@ p {
 }
 .swiper {
     width: 10rem;
-}
-.swiper-button-prev,
-.swiper-button-next {
-    color: 1px solid var(--color-primary);
 }
 img {
     width: 100%;
